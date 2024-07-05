@@ -1,5 +1,5 @@
 ---
-import {type CollectionEntry, getEntryBySlug} from "astro:content"
+import type { CollectionEntry } from "astro:content"
 import { Image } from 'astro:assets';
 
 type Props = {
@@ -32,4 +32,5 @@ const {post} = Astro.props;
     <p class="text-zinc-500 text-2xl line-clamp-2">
         {post.body}
     </p>
+    
 </article>
