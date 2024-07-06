@@ -1,6 +1,6 @@
 ---
 import { ViewTransitions } from "astro:transitions";
-import Header from "../components/Header.astro";
+import PrimaryHeader from "../components/PrimaryHeader.astro";
 interface Props {
 	title: string;
 	description?: string;
@@ -23,8 +23,8 @@ const { title, description = "A Daily Program to Help You Change Behaviors and U
 		<ViewTransitions />
 	</head>
 	<body class="min-h-screen">
-		<Header />
-		<main class="px-24 max-w max-w-7xl mx-auto w-full max-sm:px-5" >
+		<PrimaryHeader />	
+		<main class="px-24 mt-8 max-w max-w-7xl mx-auto w-full max-sm:px-5" >
 			<slot />
 		</main>
 	</body>

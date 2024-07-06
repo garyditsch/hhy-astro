@@ -1,7 +1,7 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
-import Layout from "../../layouts/Layout.astro";
+import LessonLayout from "../../layouts/LessonLayout.astro";
 import H1 from "../../components/H1.astro";
 import Image from "astro/components/Image.astro";
 
@@ -28,16 +28,14 @@ const {post} = Astro.props;
 const {Content} = await post.render();
 ---
 
-<Layout title={post.data.title}>
-    <H1 text={post.data.title} />
+<LessonLayout title={post.data.title}>
+    <!-- <H1 text={post.data.title} /> -->
+    <h2>{post.data.title} </h2>
     <Image
         src={post.data.image}
         alt={post.data.title}
         width={1024}
         height={1024 / 1.5}
-        class="rounded-2xl shadow-xl mb-4 aspect-thumbnail object-cover"
     />
-    <div class="prose prose-xl overflow-visible relative mb-20">
-        <Content />
-    </div>
-</Layout>
+    <Content />
+</LessonLayout>
