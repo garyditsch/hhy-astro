@@ -1,0 +1,35 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
+import LessonLayout from "../../layouts/LessonLayout.astro";
+import H1 from "../../components/H1.astro";
+
+export const getStaticPaths = async () => {
+    const lessons = await getCollection('lessons');
+    const paths = lessons.map(lesson => {
+        return {
+            params: {
+                slug: lesson.slug
+            },
+            props: {
+                lesson
+            }
+        }
+    })
+    return paths;
+}
+
+type Props = {
+    lesson: CollectionEntry<"lessons">
+}
+
+const {lesson} = Astro.props;
+const {Content} = await lesson.render();
+---
+
+<LessonLayout title={lesson.data.title}>
+    <H1 text={lesson.data.title} />
+    <div class="prose prose-xl overflow-visible relative mb-20">
+        <Content />
+    </div>
+</LessonLayout>

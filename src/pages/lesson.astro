@@ -1,0 +1,13 @@
+---
+import { getCollection } from "astro:content";
+import H1 from "../components/H1.astro";
+import LessonList from "../components/LessonList.astro";
+import Layout from "../layouts/Layout.astro";
+
+const lessons = await getCollection('lessons');
+---
+
+<Layout title="Lesson | Week One">
+	<H1 text="The list of lessons" />
+	<LessonList lessons={lessons} />
+</Layout>

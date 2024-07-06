@@ -7,7 +7,7 @@ interface Props {
 	image?: string;
 }
 
-const { title, description = "A Daily Program to Help You Change Behaviors and Uncover Happiness and Health", image = "/images/bamd.jpg" } = Astro.props;
+const { title, description = "Lessons for Week One", image = "/images/bamd.jpg" } = Astro.props;
 ---
 
 <!doctype html>
@@ -24,9 +24,21 @@ const { title, description = "A Daily Program to Help You Change Behaviors and U
 	</head>
 	<body class="min-h-screen">
 		<Header />
-		<main class="px-24 max-w max-w-7xl mx-auto w-full max-sm:px-5" >
+		<section class="w-full max-w-6xl mx-auto m-4">
+			<div class="grid md:grid-cols-12 gap-5 p-2 m-2">
+			  	<main class="md:col-span-9 p-4">
+					<slot />
+				</main>
+				<aside class="md:col-span-3 md:pt-0 p-2">
+					<p>one </p>
+					<p>two </p>
+				</aside>
+			</div>
+		</section>
+
+		<!-- <main class="px-24 max-w max-w-7xl mx-auto w-full max-sm:px-5" >
 			<slot />
-		</main>
+		</main> -->
 	</body>
 </html>
 
