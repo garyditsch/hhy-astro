@@ -14,7 +14,9 @@ const lessonsCollection = defineCollection({
     type: 'content',
     schema: z.object({
         week: z.string(),
-        title: z.string()
+        title: z.string(),
+        sortOrder: z.number(),
+        description: z.string()
     })
 });
 
