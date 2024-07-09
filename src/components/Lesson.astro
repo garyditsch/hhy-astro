@@ -12,13 +12,13 @@ const {lesson} = Astro.props;
 <article>
     <a
         href={`/lesson/${lesson.slug}`}
-        class="text-2xl text-zinc-900 font-semibold inline-block"
+        class="text-2xl text-dark font-semibold inline-block"
     >
         <h2>{lesson.data.title}</h2>
     </a>
 
-    <p class="text-zinc-500 text-lg line-clamp-2">
-        Add a description for the week
+    <p class="text-dark text-lg line-clamp-2">
+        {lesson.data.description}
     </p>
     
 </article>

@@ -7,11 +7,14 @@ type Props = {
 }
 
 const { lessons } = Astro.props;
+
+const orderedLessons = lessons.sort((a,b) => a.data.sortOrder - b.data.sortOrder)
+
 ---
 
 <div
     class="grid grid-cols-2 gap-x-16 gap-y-14 max-md:grid-cols-1 mb-24"
 >
-    {lessons.map((lesson) => <Lesson lesson={lesson} />)}
+    {orderedLessons.map((lesson) => <Lesson lesson={lesson} />)}
     
 </div>
