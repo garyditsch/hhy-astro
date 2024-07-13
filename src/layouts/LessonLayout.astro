@@ -24,13 +24,15 @@ const { title, description = "Lessons for Week One", image = "/images/bamd.jpg" 
 	</head>
 	<body class="bg-white">
 		<Header client:only="react"/>
-		<section class="relative flex min-h-screen flex-col justify-center overflow-hidden bg-white md:py-8">
-			<div class="relative w-full bg-white px-6 py-12 shadow-xl shadow-slate-700/10 ring-1 ring-gray-900/5 md:mx-auto md:max-w-3xl lg:max-w-4xl lg:pb-28 lg:pt-16">
-				<div class="prose prose-slate mx-auto lg:prose-lg">
-				<slot />	
+			<section class="relative flex min-h-screen flex-col justify-center overflow-hidden">
+				<div class="absolute inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#D4E4E5_1px,transparent_1px)] [background-size:16px_16px]"></div>
+					<div class="bg-mywhite relative w-full md:my-12 px-6 py-12 shadow-xl shadow-slate-700/10 ring-1 ring-gray-900/5 md:mx-auto md:max-w-3xl lg:max-w-4xl lg:pb-28 lg:pt-16">
+						<div class="prose prose-slate mx-auto lg:prose-lg">
+							<slot />	
+						</div>
+					</div>
 				</div>
-			</div>
-		</section>
+			</section>
 	</body>
 </html>
 

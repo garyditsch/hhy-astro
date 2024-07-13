@@ -28,8 +28,8 @@ const {Content} = await lesson.render();
 ---
 
 <LessonLayout title={lesson.data.title}>
-    <H1 text={lesson.data.title} />
-    <div class="prose prose-xl overflow-visible relative mb-20">
+    <h3>{lesson.data.title}</h3>
+    <div class="prose prose-lg overflow-visible relative mb-20">
         <Content />
     </div>
 </LessonLayout>
