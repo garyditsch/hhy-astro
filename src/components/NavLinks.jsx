@@ -26,7 +26,7 @@ const Nav = () => {
     return (
         <>
         <nav className="flex md:w-1/2 xl:w-1/3 justify-end">
-            <div className="hidden w-full justify-between md:flex">
+            <div className="hidden w-full justify-between md:flex text-midnight-green">
                 <NavLinks />
             </div>
             <div className="md:hidden">
@@ -34,7 +34,7 @@ const Nav = () => {
             </div>
         </nav>
         {isOpen && (
-            <div className="flex basis-full flex-col items-center space-y-2">
+            <div className="flex basis-full flex-col items-center space-y-2 text-midnight-green">
                 <NavLinks />
             </div>
         )}

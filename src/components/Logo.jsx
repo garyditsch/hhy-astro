@@ -6,7 +6,7 @@ const Logo = () => {
                     <a href="/"><img src="/LogoSquare.png" alt="logo" /></a>
                 </div>
                 <div>
-                    <span className="text-dark">Happier & Healthier You</span>
+                    <span className="text-midnight-green">Happier & Healthier You</span>
                 </div>
             </div>
         </>
