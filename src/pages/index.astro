@@ -2,7 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import H1 from '../components/H1.astro';
 import { Image } from 'astro:assets';
-import calmEnergy from "../content/posts/images/self-identity.png"
+import selfIdentity from "../content/posts/images/self-identity.png"
+import surrender from "../content/posts/images/surrender.png"
 import { callSafely } from 'astro:actions';
 ---
 
@@ -10,20 +11,20 @@ import { callSafely } from 'astro:actions';
 	<div class="grid h-full w-full grid-cols-1 grid-rows-1 md:grid-cols-12 md:grid-rows-5 gap-4">
 		<div class="md:col-span-6 md:row-span-3 rounded-lg bg-gray-200 flex justify-center items-center">
 			<Image
-				src={calmEnergy}
+				src={selfIdentity}
 				alt="Calm Energy Image"
 				class="object-cover rounded"
 			/>
 		</div>
 		<div class="md:col-span-6  md:row-span-1 rounded-lg bg-gray-200 flex justify-center items-center" >
-			<div class="w-full px-4 grid prose">
+			<div class="w-full px-4 flex justify-center prose text-2xl">
 			<h3>Live a Happier & Healthier Life!</h3>
 			</div>
 		</div>
 		<div class="md:col-span-4  md:row-span-2 rounded-lg bg-gray-200 flex justify-center items-center" >
 			<div class="w-full px-4 grid prose">
-				<div>Start Your 13 Week Journey</div>
-				<ul>
+				<div class="font-extrabold">Start Your 13 Week Journey</div>
+				<ul class="text-midnight-green font-semibold">
 					<li>Build new healthy habits</li>
 					<li>Establish a chaos free mind-set</li>
 					<li>Live with more purpose each day</li>
@@ -31,25 +32,42 @@ import { callSafely } from 'astro:actions';
 				</ul>
 			</div>
 		</div>
-		<div class="md:col-span-2  md:row-span-2 rounded-lg bg-gray-200 flex justify-center items-center">Download</div>
-		<div class="md:col-span-4  md:row-span-2 rounded-lg bg-gray-200 flex justify-center items-center">Featured Blog</div>
-		<div class="md:col-span-4  md:row-span-1 rounded-lg bg-gray-200 flex items-center">
-			<div class="bg-[#245A6E] w-1/4 h-full rounded-l-md">
-				
-			</div>
-			<div class="bg-[#98cdd6] w-1/4 h-full">
-				
-			</div>
-			<div class="bg-[#4793A9] w-1/4 h-full">
-				
-			</div>
-			<div class="bg-midnightgreen w-1/4 h-full rounded-r-md">
-				
+		<div class="md:col-span-2  md:row-span-2 rounded-lg bg-airforce-blue flex justify-center items-center">
+			<div class="flex flex-col w-full h-full">
+				<div class="flex w-full h-1/4 text-white text-xl bg-black justify-center items-center">Download</div>
+				<div class="flex w-full h-3/4 text-white text-xl bg-blue-500 justify-center items-center">ICON</div>
 			</div>
 		</div>
-		<div class="md:col-span-4  md:row-span-1 rounded-lg bg-gray-200 flex justify-center items-center">Week One</div>
-		<div class="md:col-span-3  md:row-span-1 rounded-lg bg-gray-200 flex justify-center items-center">Week Two</div>
-		<div class="md:col-span-3  md:row-span-1 rounded-lg bg-gray-200 flex justify-center items-center">Color Block</div>
+		<div class="flex justify-center items-center prose text-lg md:col-span-4  md:row-span-1 rounded-lg bg-gray-200">
+			<div class="flex h-full w-full justify-center items-center">Start Today | Week One Lesson Plan</div>
+		</div>
+		<div class="md:col-span-4  md:row-span-1 rounded-lg bg-midnight-green flex items-center">
+			<div class="w-full h-full rounded-lg p-4">
+				<a
+					href='/blog/'
+					class="text-xl text-alice-white font-semibold"
+				>
+					<div class="line-clamp-1">My Blog Post</div>
+				</a>
+
+				<div class="text-alice-white pt-2 line-clamp-2">
+					The start of the content is here for the post
+				</div>
+			</div>
+		</div>
+		<div class="md:col-span-4  md:row-span-2 rounded-lg bg-gray-200 flex justify-center items-center">
+			<Image
+				src={surrender}
+				alt="Calm Energy Image"
+				class="object-cover rounded"
+			/>
+		</div>
 		<div class="md:col-span-2  md:row-span-1 rounded-lg bg-gray-200 flex justify-center items-center">Twitter</div>
+		<div class="md:col-span-3  md:row-span-1 rounded-lg bg-gray-200 flex justify-center items-center">
+			<div class="bg-moonstone w-full h-full rounded-lg">
+			</div>
+		</div>
+		<div class="md:col-span-3  md:row-span-1 rounded-lg bg-gray-200">
+		</div>
 	</div>
 </Layout>

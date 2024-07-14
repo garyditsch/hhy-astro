@@ -5,7 +5,7 @@ export default {
 		extend: {
 			colors: {
 				'midnight-green': '#27596C',
-				'moon-stone': '#679FB0',
+				'moonstone': '#679FB0',
 				'airforce-blue': '#4E7C8E',
 				'alice-white': '#EEF6F7',
 				'blue-munsell': '#4695AC',
