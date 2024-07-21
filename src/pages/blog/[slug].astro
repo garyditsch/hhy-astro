@@ -29,8 +29,11 @@ const {Content} = await post.render();
 ---
 
 <LessonLayout title={post.data.title}>
-    <!-- <H1 text={post.data.title} /> -->
-    <h2>{post.data.title} </h2>
+    <div class="text-2xl font-bold ">{post.data.title} </div>
+    <div class="text-xs text-midnight-green">
+        <span class="pr-4">{post.data.originalDate ? `Written:  ${post.data.originalDate}` : ' '}</span>
+        <span>{post.data.updated ? `Last Updated:  ${post.data.updated}` : ' '}</span>
+    </div>
     <Image
         src={post.data.image}
         alt={post.data.title}

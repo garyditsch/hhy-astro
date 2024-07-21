@@ -7,7 +7,9 @@ const postsCollection = defineCollection({
         image: image(),
         title: z.string(),
         sortOrder: z.number(),
-        featured: z.boolean()
+        featured: z.boolean(),
+        originalDate: z.string().optional(),
+        updated: z.string().optional()
     })
 });
 
