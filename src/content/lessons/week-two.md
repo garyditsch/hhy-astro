@@ -7,9 +7,9 @@ description: 'Establish a successful mindset'
 
 ### Read
 
-- Two lessons about successfully changing your behavior that are not fun.
-- What is your story? Sabotaging thoughts and 2 strategies to overcome them.
-- Challenge yourself: The secret to living fully as we age.
+- [Two lessons about successfully changing your behavior that are not fun.](/blog/two-lessons-about-changing-behaviors)
+- [What is your story? Sabotaging thoughts and 2 strategies to overcome them.](/blog/your-story-and-sabotaging-thoughts)
+- [Challenging yourself and living well](/blog/challenging-yourself-is-a-secret-to-aging-well)
 
 ### Objective
 
