@@ -7,7 +7,7 @@ description: 'Finding social support to improve your chance of success'
 
 ### Read
 
-- Social support in your change process: Lessons from weddings, fires, divorce and alcohol
+- [Social support in your change process](/blog/social-support-during-your-change-process)
 
 ### Objectives:
 
@@ -19,7 +19,7 @@ description: 'Finding social support to improve your chance of success'
 
 ### Comments
 
-- There are very few journeys that we complete in isolation. Even when you feel like you are doing the work without much support, there are individuals or groups that can unintentionally influence how you live. This week is about taking the time to understand what positive social support looks like, then identifying how we can enlist that support to improve your chances of success.
+- There are very few journeys that we complete in isolation. Even when you feel like you are doing the work without much support, there are individuals or groups that can unintentionally influence how you live. This week is about taking the time to understand what positive social support looks like, then identifying how to enlist that support to improve your chances of success.
 
 ### Activities
 
