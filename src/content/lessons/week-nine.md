@@ -7,7 +7,7 @@ description: 'Change your setting to change your habits'
 
 ### Read
 
-- Change your setting to change your habits: it can be as simple as going around the block.
+- [Change your setting to change your habits](/blog/change-your-setting-to-change-your-habits)
 
 ### Objectives
 
