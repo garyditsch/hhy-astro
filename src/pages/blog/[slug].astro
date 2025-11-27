@@ -9,7 +9,10 @@ import Image from "astro/components/Image.astro";
 
 export const getStaticPaths = async () => {
     const posts = await getCollection('posts');
-    let paths = posts.map(post => {
+    let paths: Array<{
+        params: { slug: string };
+        props: { post: CollectionEntry<'posts'> | CollectionEntry<'drafts'>; isDraft: boolean };
+    }> = posts.map(post => {
         return {
             params: {
                 slug: post.slug

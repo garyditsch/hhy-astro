@@ -10,7 +10,7 @@ export function filterByDraftStatus(
     drafts: CollectionEntry<'drafts'>[],
     includeDrafts: boolean
 ): Array<CollectionEntry<'posts'> | CollectionEntry<'drafts'>> {
-    const result = [...posts];
+    const result: Array<CollectionEntry<'posts'> | CollectionEntry<'drafts'>> = [...posts];
     if (includeDrafts && shouldShowDrafts()) {
         result.push(...drafts);
     }
