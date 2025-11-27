@@ -3,16 +3,21 @@ import type { CollectionEntry } from "astro:content";
 import Post from "./Post.astro";
 
 type Props = {
-    posts: CollectionEntry<'posts'>[];
+    posts: Array<CollectionEntry<'posts'> | CollectionEntry<'drafts'>>;
 }
 
 const { posts } = Astro.props;
 
-const orderedPosts = posts.sort((a,b) => a.data.sortOrder - b.data.sortOrder)
+const orderedPosts = posts.sort((a,b) => a.data.sortOrder - b.data.sortOrder);
+
+const postsWithDraftStatus = orderedPosts.map(post => ({
+    post,
+    isDraft: post.collection === 'drafts'
+}));
 ---
 
 <div
     class="grid grid-cols-3 gap-x-16 gap-y-14 max-md:grid-cols-1 mb-24"
 >
-    {posts.map((post) => <Post post={post} />)}
+    {postsWithDraftStatus.map(({ post, isDraft }) => <Post post={post} isDraft={isDraft} />)}
 </div>

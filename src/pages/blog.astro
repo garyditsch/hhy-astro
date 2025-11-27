@@ -1,12 +1,15 @@
 ---
 import { getCollection } from "astro:content";
+import { filterByDraftStatus, shouldShowDrafts } from "../utils/drafts";
 import H1 from "../components/H1.astro";
 import PostList from "../components/PostList.astro";
 import Layout from "../layouts/Layout.astro";
 
 const posts = await getCollection('posts');
+const drafts = shouldShowDrafts() ? await getCollection('drafts') : [];
+const allPosts = filterByDraftStatus(posts, drafts, shouldShowDrafts());
 ---
 
 <Layout title="Blog | HHY">
-	<PostList posts={posts} />
+	<PostList posts={allPosts} />
 </Layout>

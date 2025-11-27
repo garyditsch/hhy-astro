@@ -1,34 +1,56 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
+import { shouldShowDrafts } from "../../utils/drafts";
 import LessonLayout from "../../layouts/LessonLayout.astro";
 import H1 from "../../components/H1.astro";
+import DraftBanner from "../../components/DraftBanner.astro";
 import Image from "astro/components/Image.astro";
 
 export const getStaticPaths = async () => {
     const posts = await getCollection('posts');
-    const paths = posts.map(post => {
+    let paths = posts.map(post => {
         return {
             params: {
                 slug: post.slug
             },
             props: {
-                post
+                post,
+                isDraft: false
             }
         }
-    })
+    });
+
+    if (shouldShowDrafts()) {
+        const drafts = await getCollection('drafts');
+        const draftPaths = drafts.map(draft => {
+            return {
+                params: {
+                    slug: draft.slug
+                },
+                props: {
+                    post: draft,
+                    isDraft: true
+                }
+            }
+        });
+        paths = [...paths, ...draftPaths];
+    }
+
     return paths;
 }
 
 type Props = {
-    post: CollectionEntry<"posts">
+    post: CollectionEntry<"posts"> | CollectionEntry<"drafts">,
+    isDraft: boolean
 }
 
-const {post} = Astro.props;
+const {post, isDraft} = Astro.props;
 const {Content} = await post.render();
 ---
 
 <LessonLayout title={post.data.title}>
+    {isDraft && <DraftBanner />}
     <div class="text-2xl font-bold ">{post.data.title} </div>
     <div class="text-xs text-midnight-green">
         <span class="pr-4">{post.data.originalDate ? `Written:  ${post.data.originalDate}` : ' '}</span>
