@@ -11,7 +11,7 @@ tags:
   - hhy
 ---
 
-What is your story? What are the sabotaging thoughts you keep telling yourself? Here's a look at those two questions and two strategies to overcome them
+What is your story? What are the sabotaging thoughts you keep telling yourself? Here's a look at those two questions and two strategies to overcome them. 
 
 We all have stories we tell ourselves. The internal dialogue we use to narrate our lives. Those stories have a strong impact on how we view the world and ourselves. The narratives create characters and settings in our minds. We then insert our identities into those stories and navigate the best we can. 
 
